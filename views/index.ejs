@@ -361,7 +361,7 @@
           </ul>
         </li>       
         <li>
-          <a href="pages/calendar.html">
+          <a href="/calendar">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -370,7 +370,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/mailbox/mailbox.html">
+          <a href="/mail">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
@@ -385,13 +385,94 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" ng-controller="MainCtrl">
+  <div class="content-wrapper" ng-controller="MainCtrl" style="padding: 10px">
     <!-- Main content -->
-    <ui-view>
-    	
-    </ui-view>
-    </script>
+    <br><br>
+    <div class="row">       
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>44</h3>
+
+              <p>User Registrations</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+              More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div>  
+
+        <!--residences-->
+         <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>44</h3>
+
+              <p>Residences</p>
+            </div>
+            <div class="icon" style="margin-top: -3px">
+              <i class="fa fa-home" ></i>
+            </div>
+            <a href="#" class="small-box-footer">
+              More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+          </div>
+          </div>
+        <!--events-->
+         <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-blue">
+            <div class="inner">
+              <h3>44</h3>
+
+              <p>Events</p>
+            </div>
+            <div class="icon" style="margin-top: -3px">
+              <i class="fa fa-calendar" ></i>
+            </div>
+            <a href="#" class="small-box-footer">
+              More info <i class="fa fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div>         
+      </div>
         <!-- /.content -->
+     <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Vicinity Map</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                  <div class="pad">
+                    <!-- Map will be created here -->
+                    <div id="world-map-markers" style="height: 325px;"></div>
+                  </div>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+          </div>
   </div>
   <!-- /.content-wrapper -->
 

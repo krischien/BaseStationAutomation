@@ -386,104 +386,268 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" ng-controller="MainCtrl" style="padding: 10px">
-  <section class="content-header">
-      <h1>
-        <br>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Houses</li>
-      </ol>
-    </section>
-    <br>
-   <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Residences</h3>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="compose.html" class="btn btn-primary btn-block margin-bottom">Compose</a>
+
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Folders</h3>
+
+              <div class="box-tools">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Residence Name</th>
-                  <th>Address</th>
-                  <th>Population</th>
-                  <th>PrimaryContact No.</th>
-                  <th>Head of Household</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>                
-                </tfoot>
-              </table>
+            <div class="box-body no-padding">
+              <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><i class="fa fa-inbox"></i> Inbox
+                  <span class="label label-primary pull-right">12</span></a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i> Sent</a></li>
+                <li><a href="#"><i class="fa fa-file-text-o"></i> Drafts</a></li>
+                <li><a href="#"><i class="fa fa-filter"></i> Junk <span class="label label-warning pull-right">65</span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-trash-o"></i> Trash</a></li>
+              </ul>
             </div>
             <!-- /.box-body -->
           </div>
-        <!-- /.content -->
+          <!-- /. box -->
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Labels</h3>
 
-  <button class="btn btn-primary" data-toggle="modal" data-target="#modal-default">Register</button>
-  </div>
-  </div>
-  <div class="modal fade" id="modal-default">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Register Residence</h4>
-              </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <label for="rName">Residence Name:</label>
-                  <input type="text" class="form-control" id="rName" placeholder="First Name">
-                  <label for="population">Population:</label>
-                  <input type="text" class="form-control" id="population" placeholder="Middle Name">
-                  <label for="lName">Head of Household:</label>
-                  <input type="text" class="form-control" id="hHOusehold" placeholder="Last Name"> 
-                  <label for="pContact">Primary Contact No.:</label>
-                  <input type="text" class="form-control" id="pContact" placeholder="Last Name">
-                  <label for="sContact">Secondary Contact No.:</label>
-                  <input type="text" class="form-control" id="sContact" placeholder="Last Name">
-                  <label for="sContact">Address:</label>
-                  <textarea class="form-control" rows="4" cols="50"></textarea>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+              <div class="box-tools">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
               </div>
             </div>
-            <!-- /.modal-content -->
+            <div class="box-body no-padding">
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#"><i class="fa fa-circle-o text-red"></i> Important</a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> Promotions</a></li>
+                <li><a href="#"><i class="fa fa-circle-o text-light-blue"></i> Social</a></li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
           </div>
-          <!-- /.modal-dialog -->
+          <!-- /.box -->
         </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Inbox</h3>
 
+              <div class="box-tools pull-right">
+                <div class="has-feedback">
+                  <input type="text" class="form-control input-sm" placeholder="Search Mail">
+                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="mailbox-controls">
+                <!-- Check all button -->
+                <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                </button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+                </div>
+                <!-- /.btn-group -->
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                <div class="pull-right">
+                  1-50/200
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
+                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                  </div>
+                  <!-- /.btn-group -->
+                </div>
+                <!-- /.pull-right -->
+              </div>
+              <div class="table-responsive mailbox-messages">
+                <table class="table table-hover table-striped">
+                  <tbody>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">5 mins ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">28 mins ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">11 hours ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">15 hours ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">Yesterday</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">2 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">2 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">2 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">2 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">2 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">4 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"></td>
+                    <td class="mailbox-date">12 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star-o text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">12 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">14 days ago</td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+                    <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                    <td class="mailbox-subject"><b>AdminLTE 2.0 Issue</b> - Trying to find a solution to this problem...
+                    </td>
+                    <td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
+                    <td class="mailbox-date">15 days ago</td>
+                  </tr>
+                  </tbody>
+                </table>
+                <!-- /.table -->
+              </div>
+              <!-- /.mail-box-messages -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer no-padding">
+              <div class="mailbox-controls">
+                <!-- Check all button -->
+                <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
+                </button>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
+                  <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+                </div>
+                <!-- /.btn-group -->
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+                <div class="pull-right">
+                  1-50/200
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
+                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                  </div>
+                  <!-- /.btn-group -->
+                </div>
+                <!-- /.pull-right -->
+              </div>
+            </div>
+          </div>
+          <!-- /. box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+  </div>
   <!-- /.content-wrapper -->
 
   <footer class="main-footer">

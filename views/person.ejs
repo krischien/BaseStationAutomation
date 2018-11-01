@@ -361,7 +361,7 @@
           </ul>
         </li>       
         <li>
-          <a href="pages/calendar.html">
+          <a href="/calendar">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -370,7 +370,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/mailbox/mailbox.html">
+          <a href="/mail">
             <i class="fa fa-envelope"></i> <span>Mailbox</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">12</small>
@@ -385,10 +385,10 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper" ng-controller="MainCtrl">
+  <div class="content-wrapper" ng-controller="MainCtrl" style="padding: 10px">
   <section class="content-header">
       <h1>
-        Person
+         <br>
       </h1>
       <ol class="breadcrumb">
         <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -396,12 +396,119 @@
       </ol>
     </section>
     <!-- Main content --> 
-
-    </script>
+<br>
+    <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Person Profile</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Address</th>
+                  <th>Age</th>
+                  <th>Contact No.</th>
+                  <th>Occupation</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Trident</td>
+                  <td>Internet
+                    Explorer 4.0
+                  </td>
+                  <td>Win 95+</td>
+                  <td> 4</td>
+                  <td>X</td>
+                </tr>
+                <tr>
+                  <td>Trident</td>
+                  <td>Internet
+                    Explorer 5.0
+                  </td>
+                  <td>Win 95+</td>
+                  <td>5</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>Trident</td>
+                  <td>Internet
+                    Explorer 5.5
+                  </td>
+                  <td>Win 95+</td>
+                  <td>5.5</td>
+                  <td>A</td>
+                </tr>                
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
         <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
 
+  <button class="btn btn-primary" data-toggle="modal" data-target="#modal-default">Register</button>
+  </div>
+
+<div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Register Person</h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                <table>
+                  <tr>
+                    <td>
+                      <label for="fName">First Name:</label>
+                      <input type="text" class="form-control" id="fName" placeholder="First Name">
+                      <label for="mName">Middle Name:</label>
+                      <input type="text" class="form-control" id="mName" placeholder="Middle Name">
+                      <label for="lName">last Name:</label>
+                      <input type="text" class="form-control" id="lName" placeholder="Last Name">
+                      <label for="bDate">Birthdate:</label>
+                      <input type="date" class="form-control" id="bDate">
+                      <label for="age">Age:</label>
+                      <input type="number" class="form-control" id="age" placeholder="0">
+                      <label for="bloodType">Blood Type:</label>
+                      <input type="text" class="form-control" id="bloodType" placeholder="Blood Type">
+                    </td>
+                    <td style="padding: 30px">
+                      <label for="contact">Contact No.:</label>
+                      <input type="text" class="form-control" id="contact" placeholder="+6312345677891">
+                      <label for="occupation">Occupation:</label>
+                      <input type="text" class="form-control" id="occupation" placeholder="Occupation">
+                      <label for="tin">TIN:</label>
+                      <input type="text" class="form-control" id="tin" placeholder="TIN No.">
+                      <label for="sss">SSS:</label>
+                      <input type="text" class="form-control" id="sss" placeholder="SSS NO.">
+                      <label for="philHealth">PhilHealth:</label>
+                      <input type="text" class="form-control" id="philHealth" placeholder="PhilHealth No.">
+                      <label for="religion">Religious Affiliation:</label>
+                      <input type="text" class="form-control" id="religion" placeholder="Religion">
+                    </td>
+                  </tr>
+                </table>    
+                  <label for="exampleInputEmail1">Address:</label>
+                  <textarea class="form-control" rows="4" cols="50"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+  <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
