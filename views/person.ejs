@@ -333,7 +333,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li><a href="/"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li class="active treeview menu-open">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Roster</span>
             <span class="pull-right-container">
@@ -414,33 +414,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>                
+                <% for(var i=0; i < output.length; i++) { %>
+                   <tr>
+                      <td> <%= output[i].firstName %>&nbsp;<%= output[i].lastName %></td>
+                      <td><%= output[i].address %></td>
+                      <td><%= output[i].age %></td>
+                      <td><%= output[i].contactNo %></td>
+                      <td><%= output[i].occupation %></td>
+                   </tr>
+                <% } %>                  
                 </tfoot>
               </table>
             </div>
@@ -455,6 +437,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
+              <form method="post" action="/person">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Register Person</h4>
@@ -464,43 +447,44 @@
                 <table>
                   <tr>
                     <td>
-                      <label for="fName">First Name:</label>
-                      <input type="text" class="form-control" id="fName" placeholder="First Name">
-                      <label for="mName">Middle Name:</label>
-                      <input type="text" class="form-control" id="mName" placeholder="Middle Name">
-                      <label for="lName">last Name:</label>
-                      <input type="text" class="form-control" id="lName" placeholder="Last Name">
+                      <label for="firstName">First Name:</label>
+                      <input type="text" class="form-control" id="firstName" name="firstName"placeholder="First Name">
+                      <label for="middleName">Middle Name:</label>
+                      <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name">
+                      <label for="lastName">last Name:</label>
+                      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
                       <label for="bDate">Birthdate:</label>
-                      <input type="date" class="form-control" id="bDate">
+                      <input type="date" class="form-control" id="bDate" name="bDate">
                       <label for="age">Age:</label>
-                      <input type="number" class="form-control" id="age" placeholder="0">
+                      <input type="number" class="form-control" id="age" name="age" placeholder="0">
                       <label for="bloodType">Blood Type:</label>
-                      <input type="text" class="form-control" id="bloodType" placeholder="Blood Type">
+                      <input type="text" class="form-control" id="bloodType" name="bloodType" placeholder="Blood Type">
                     </td>
                     <td style="padding: 30px">
-                      <label for="contact">Contact No.:</label>
-                      <input type="text" class="form-control" id="contact" placeholder="+6312345677891">
+                      <label for="contactNo">Contact No.:</label>
+                      <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="+6312345677891">
                       <label for="occupation">Occupation:</label>
-                      <input type="text" class="form-control" id="occupation" placeholder="Occupation">
+                      <input type="text" class="form-control" id="occupation" name="occupation" placeholder="Occupation">
                       <label for="tin">TIN:</label>
-                      <input type="text" class="form-control" id="tin" placeholder="TIN No.">
+                      <input type="text" class="form-control" id="tin" name="tin" placeholder="TIN No.">
                       <label for="sss">SSS:</label>
-                      <input type="text" class="form-control" id="sss" placeholder="SSS NO.">
+                      <input type="text" class="form-control" id="sss" name="sss" placeholder="SSS NO.">
                       <label for="philHealth">PhilHealth:</label>
-                      <input type="text" class="form-control" id="philHealth" placeholder="PhilHealth No.">
+                      <input type="text" class="form-control" id="philHealth" name="philHealth" placeholder="PhilHealth No.">
                       <label for="religion">Religious Affiliation:</label>
-                      <input type="text" class="form-control" id="religion" placeholder="Religion">
+                      <input type="text" class="form-control" id="religion" name="religion" laceholder="Religion">
                     </td>
                   </tr>
                 </table>    
-                  <label for="exampleInputEmail1">Address:</label>
-                  <textarea class="form-control" rows="4" cols="50"></textarea>
+                  <label for="address">Address:</label>
+                  <textarea class="form-control" rows="4" cols="50" id="address" name="address"></textarea>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
               </div>
+              </form>
             </div>
             <!-- /.modal-content -->
           </div>

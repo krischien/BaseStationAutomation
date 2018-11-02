@@ -333,7 +333,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li><a href="/"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li class="active treeview menu-open">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Roster</span>
             <span class="pull-right-container">
@@ -413,40 +413,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>                
+                <% for(var i=0; i < output.length; i++) { %>
+                   <tr>
+                      <td> <%= output[i].residenceName %></td>
+                      <td><%= output[i].address %></td>
+                      <td><%= output[i].population %></td>
+                      <td><%= output[i].primaryContact %></td>
+                      <td><%= output[i].hHousehould %></td>
+                   </tr>
+                <% } %>  
                 </tfoot>
               </table>
             </div>
             <!-- /.box-body -->
           </div>
         <!-- /.content -->
-
   <button class="btn btn-primary" data-toggle="modal" data-target="#modal-default">Register</button>
   </div>
   </div>
@@ -454,36 +435,37 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
+              <form method="post" action="/home">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">Register Residence</h4>
               </div>
-              <div class="modal-body">
+              <div class="modal-body"> 
                 <div class="form-group">
-                  <label for="rName">Residence Name:</label>
-                  <input type="text" class="form-control" id="rName" placeholder="First Name">
+                  <label for="residenceName">Residence Name:</label>
+                  <input type="text" class="form-control" id="residenceName" name="residenceName"  placeholder="First Name" >
                   <label for="population">Population:</label>
-                  <input type="text" class="form-control" id="population" placeholder="Middle Name">
-                  <label for="lName">Head of Household:</label>
-                  <input type="text" class="form-control" id="hHOusehold" placeholder="Last Name"> 
-                  <label for="pContact">Primary Contact No.:</label>
-                  <input type="text" class="form-control" id="pContact" placeholder="Last Name">
-                  <label for="sContact">Secondary Contact No.:</label>
-                  <input type="text" class="form-control" id="sContact" placeholder="Last Name">
+                  <input type="text" class="form-control" id="population" name="population" placeholder="Middle Name">
+                  <label for="hHousehould">Head of Household:</label>
+                  <input type="text" class="form-control" id="hHousehould" name="hHousehould" placeholder="Last Name"> 
+                  <label for="primaryContact">Primary Contact No.:</label>
+                  <input type="text" class="form-control" id="primaryContact" name="primaryContact" placeholder="Last Name">
+                  <label for="secondaryContact">Secondary Contact No.:</label>
+                  <input type="text" class="form-control" id="secondaryContact" name="secondaryContact" placeholder="Last Name">
                   <label for="sContact">Address:</label>
-                  <textarea class="form-control" rows="4" cols="50"></textarea>
-                </div>
+                  <textarea class="form-control" rows="4" cols="50" id="address" name="address"></textarea>
+                </div> 
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-primary" ng-click='submit'>Save changes</button>
               </div>
+              </form>
             </div>
             <!-- /.modal-content -->
           </div>
           <!-- /.modal-dialog -->
         </div>
-
   <!-- /.content-wrapper -->
 
   <footer class="main-footer">
