@@ -411,6 +411,7 @@
                   <th>Age</th>
                   <th>Contact No.</th>
                   <th>Occupation</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -421,6 +422,11 @@
                       <td><%= output[i].age %></td>
                       <td><%= output[i].contactNo %></td>
                       <td><%= output[i].occupation %></td>
+                      <td>
+                        <div class="btn-group">
+                        <button class="btn btn-success">View</a></button>&nbsp;<button class="btn btn-success">Update</button>&nbsp;<button class="btn btn-danger">Delete</button>
+                        </div>
+                      </td>
                    </tr>
                 <% } %>                  
                 </tfoot>
